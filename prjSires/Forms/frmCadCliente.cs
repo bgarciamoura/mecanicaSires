@@ -143,5 +143,11 @@ namespace prjSires.Forms
             frmOrcView frm = new frmOrcView("Bruno");
             frm.ShowDialog();
         }
+
+        private void btnRealizados_Click(object sender, EventArgs e)
+        {
+            frmSerView frm = new frmSerView("Bruno");
+            frm.ShowDialog();
+        }
     }
 }

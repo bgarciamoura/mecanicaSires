@@ -295,6 +295,7 @@
             this.btnRealizados.TabIndex = 19;
             this.btnRealizados.Text = "Serviços Realizados";
             this.btnRealizados.UseVisualStyleBackColor = true;
+            this.btnRealizados.Click += new System.EventHandler(this.btnRealizados_Click);
             // 
             // pnlDados
             // 
