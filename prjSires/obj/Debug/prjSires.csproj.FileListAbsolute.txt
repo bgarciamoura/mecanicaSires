@@ -9,3 +9,4 @@ C:\Users\Vycros\source\MecanicaSires\prjSires\obj\Debug\prjSires.pdb
 C:\Users\Vycros\source\MecanicaSires\prjSires\obj\Debug\prjSires.Forms.frmPrincipal.resources
 C:\Users\Vycros\source\MecanicaSires\prjSires\obj\Debug\prjSires.csprojResolveAssemblyReference.cache
 C:\Users\Vycros\source\MecanicaSires\prjSires\obj\Debug\prjSires.Forms.frmCadCliente.resources
+C:\Users\Vycros\source\MecanicaSires\prjSires\obj\Debug\prjSires.Forms.frmOrcView.resources

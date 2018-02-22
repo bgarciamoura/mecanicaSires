@@ -28,89 +28,120 @@ namespace prjSires.Forms
         private void frmCadCliente_Load(object sender, EventArgs e)
         {
             cmbUf.SelectedItem = "SP";
-            pnlDados.Enabled = false;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            btnCadastrar.Enabled = false;
-            btnCancelar.Enabled = true;
-            btnSalvar.Enabled = true;
-            btnEditar.Enabled = false;
-            btnExcluir.Enabled = false;
-            pnlDados.Enabled = true;
-            pnlPesquisa.Enabled = false;
-            dgvDadosCliente.Enabled = false;
-            dgvDadosCliente.ClearSelection();
+            setEnable("cad");
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            btnCadastrar.Enabled = true;
-            btnCancelar.Enabled = false;
-            btnSalvar.Enabled = false;
-            btnEditar.Enabled = false;
-            btnExcluir.Enabled = false;
-            pnlDados.Enabled = false;
-            pnlPesquisa.Enabled = true;
-            dgvDadosCliente.Enabled = true;
-            dgvDadosCliente.ClearSelection();
+            setEnable("sce");
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            btnCadastrar.Enabled = true;
-            btnCancelar.Enabled = false;
-            btnSalvar.Enabled = false;
-            btnEditar.Enabled = false;
-            btnExcluir.Enabled = false;
-            btnOrcamento.Enabled = false;
-            btnRealizados.Enabled = false;
-            pnlDados.Enabled = false;
-            pnlPesquisa.Enabled = true;
-            dgvDadosCliente.Enabled = true;
-            dgvDadosCliente.ClearSelection();
+            setEnable("sce");
         }
-
-        private void dgvDadosCliente_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            btnCadastrar.Enabled = false;
-            btnCancelar.Enabled = true;
-            btnSalvar.Enabled = false;
-            btnEditar.Enabled = true;
-            btnExcluir.Enabled = true;
-            btnOrcamento.Enabled = true;
-            btnRealizados.Enabled = true;
-            pnlDados.Enabled = false;
-            pnlPesquisa.Enabled = false;
-        }
-
+        
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            btnCadastrar.Enabled = false;
-            btnCancelar.Enabled = true;
-            btnSalvar.Enabled = true;
-            btnEditar.Enabled = false;
-            btnExcluir.Enabled = false;
-            btnOrcamento.Enabled = false;
-            btnRealizados.Enabled = false;
-            pnlDados.Enabled = true;
-            pnlPesquisa.Enabled = false;
-            dgvDadosCliente.Enabled = false;
+            setEnable("e");
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            btnCadastrar.Enabled = true;
-            btnCancelar.Enabled = false;
-            btnSalvar.Enabled = false;
-            btnEditar.Enabled = false;
-            btnExcluir.Enabled = false;
-            btnOrcamento.Enabled = false;
-            btnRealizados.Enabled = false;
-            pnlDados.Enabled = false;
-            pnlPesquisa.Enabled = true;
-            dgvDadosCliente.ClearSelection();
+            setEnable("sce");
+        }
+
+        private void dgvDadosCliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            setEnable("dgv");
+        }
+
+
+
+        //HABILITA E DESABILITA CONTROLES DO FORM
+        private void setEnable(String x)
+        {
+            int position = 4;
+            bool[] inicial = { true, false, false, false, false };
+            foreach (Control c in pnlBotoes.Controls)
+            {
+                switch (x)
+                {
+                    //SALVAR CANCELAR EXCLUIR
+                    case "sce":
+                        ((Button)c).Enabled = inicial[position];
+                        btnOrcamento.Enabled = false;
+                        btnRealizados.Enabled = false;
+                        pnlDados.Enabled = false;
+                        pnlPesquisa.Enabled = true;
+                        dgvDadosCliente.Enabled = true;
+                        dgvDadosCliente.ClearSelection();
+                        break;
+
+                    //EDITAR
+                    case "e":
+                        if (position <= 2)
+                        {
+                            ((Button)c).Enabled = false;
+                        }
+                        else
+                        {
+                            ((Button)c).Enabled = true;
+                        }
+                        btnOrcamento.Enabled = false;
+                        btnRealizados.Enabled = false;
+                        pnlDados.Enabled = true;
+                        pnlPesquisa.Enabled = false;
+                        dgvDadosCliente.Enabled = false;
+                        break;
+
+                    //DATAGRIDVIEW
+                    case "dgv":
+                        if (position > 0 && position < 3 || position == 4)
+                        {
+                            ((Button)c).Enabled = true;
+                        }
+                        else
+                        {
+                            ((Button)c).Enabled = false;
+                        }
+                        btnOrcamento.Enabled = true;
+                        btnRealizados.Enabled = true;
+                        pnlDados.Enabled = false;
+                        pnlPesquisa.Enabled = false;
+                        break;
+
+                    //CADASTRAR
+                    case "cad":
+                        if (position < 3)
+                        {
+                            ((Button)c).Enabled = false;
+                        }
+                        else
+                        {
+                            ((Button)c).Enabled = true;
+                        }
+                        pnlDados.Enabled = true;
+                        pnlPesquisa.Enabled = false;
+                        dgvDadosCliente.Enabled = false;
+                        dgvDadosCliente.ClearSelection();
+                        break;
+                    default:
+                        break;
+                }
+                position--;
+            }
+
+        }
+
+        private void btnOrcamento_Click(object sender, EventArgs e)
+        {
+            frmOrcView frm = new frmOrcView("Bruno");
+            frm.ShowDialog();
         }
     }
 }

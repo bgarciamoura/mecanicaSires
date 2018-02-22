@@ -30,15 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadCliente));
             this.pnlBotoes = new System.Windows.Forms.Panel();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.pnlPesquisa = new System.Windows.Forms.Panel();
-            this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.dgvDadosCliente = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnOrcamento = new System.Windows.Forms.Button();
             this.btnRealizados = new System.Windows.Forms.Button();
             this.pnlDados = new System.Windows.Forms.Panel();
@@ -63,17 +74,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlBotoes.SuspendLayout();
             this.pnlPesquisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDadosCliente)).BeginInit();
@@ -93,40 +93,17 @@
             this.pnlBotoes.Size = new System.Drawing.Size(1348, 70);
             this.pnlBotoes.TabIndex = 0;
             // 
-            // btnCadastrar
+            // btnCancelar
             // 
-            this.btnCadastrar.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(399, 12);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(104, 44);
-            this.btnCadastrar.TabIndex = 0;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Enabled = false;
-            this.btnEditar.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(509, 12);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(104, 44);
-            this.btnEditar.TabIndex = 1;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Enabled = false;
-            this.btnExcluir.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(619, 12);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(104, 44);
-            this.btnExcluir.TabIndex = 2;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(839, 12);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(104, 44);
+            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -140,17 +117,40 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // btnCancelar
+            // btnExcluir
             // 
-            this.btnCancelar.Enabled = false;
-            this.btnCancelar.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(839, 12);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(104, 44);
-            this.btnCancelar.TabIndex = 4;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnExcluir.Enabled = false;
+            this.btnExcluir.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(619, 12);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(104, 44);
+            this.btnExcluir.TabIndex = 2;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Enabled = false;
+            this.btnEditar.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(509, 12);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(104, 44);
+            this.btnEditar.TabIndex = 1;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Location = new System.Drawing.Point(399, 12);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(104, 44);
+            this.btnCadastrar.TabIndex = 0;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // pnlPesquisa
             // 
@@ -162,6 +162,14 @@
             this.pnlPesquisa.Size = new System.Drawing.Size(1348, 70);
             this.pnlPesquisa.TabIndex = 6;
             // 
+            // txtPesquisa
+            // 
+            this.txtPesquisa.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesquisa.Location = new System.Drawing.Point(364, 23);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(524, 27);
+            this.txtPesquisa.TabIndex = 5;
+            // 
             // btnPesquisar
             // 
             this.btnPesquisar.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -171,14 +179,6 @@
             this.btnPesquisar.TabIndex = 6;
             this.btnPesquisar.Text = "Pesquisar por Nome";
             this.btnPesquisar.UseVisualStyleBackColor = true;
-            // 
-            // txtPesquisa
-            // 
-            this.txtPesquisa.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisa.Location = new System.Drawing.Point(364, 23);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(524, 27);
-            this.txtPesquisa.TabIndex = 5;
             // 
             // dgvDadosCliente
             // 
@@ -205,7 +205,73 @@
             this.dgvDadosCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDadosCliente.Size = new System.Drawing.Size(1348, 386);
             this.dgvDadosCliente.TabIndex = 43;
-            this.dgvDadosCliente.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvDadosCliente_MouseDoubleClick);
+            this.dgvDadosCliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDadosCliente_CellDoubleClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nome";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "CPF/CNPJ";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "OBS";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Logradouro";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Número";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Bairro";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Cidade";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "UF";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "CEP";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Referência";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "OK?";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
             // 
             // btnOrcamento
             // 
@@ -217,6 +283,7 @@
             this.btnOrcamento.TabIndex = 18;
             this.btnOrcamento.Text = "Orçamentos do Cliente";
             this.btnOrcamento.UseVisualStyleBackColor = true;
+            this.btnOrcamento.Click += new System.EventHandler(this.btnOrcamento_Click);
             // 
             // btnRealizados
             // 
@@ -261,13 +328,13 @@
             // 
             // chkOk
             // 
-            this.chkOk.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkOk.AutoCheck = false;
             this.chkOk.AutoSize = true;
+            this.chkOk.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkOk.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.chkOk.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOk.Location = new System.Drawing.Point(1134, 136);
+            this.chkOk.Location = new System.Drawing.Point(950, 140);
             this.chkOk.Name = "chkOk";
-            this.chkOk.Size = new System.Drawing.Size(46, 32);
+            this.chkOk.Size = new System.Drawing.Size(61, 27);
             this.chkOk.TabIndex = 43;
             this.chkOk.Text = "Ok?";
             this.chkOk.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -484,72 +551,6 @@
             this.label1.Size = new System.Drawing.Size(49, 22);
             this.label1.TabIndex = 28;
             this.label1.Text = "Nome";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Nome";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "CPF/CNPJ";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "OBS";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Logradouro";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Número";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Bairro";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Cidade";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "UF";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "CEP";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Referência";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "OK?";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
             // 
             // frmCadCliente
             // 
