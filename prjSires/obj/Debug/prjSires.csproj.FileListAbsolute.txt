@@ -1,0 +1,11 @@
+C:\Users\Vycros\source\MecanicaSires\prjSires\bin\Debug\prjSires.exe.config
+C:\Users\Vycros\source\MecanicaSires\prjSires\bin\Debug\prjSires.exe
+C:\Users\Vycros\source\MecanicaSires\prjSires\bin\Debug\prjSires.pdb
+C:\Users\Vycros\source\MecanicaSires\prjSires\obj\Debug\prjSires.Properties.Resources.resources
+C:\Users\Vycros\source\MecanicaSires\prjSires\obj\Debug\prjSires.csproj.GenerateResource.Cache
+C:\Users\Vycros\source\MecanicaSires\prjSires\obj\Debug\prjSires.csproj.CoreCompileInputs.cache
+C:\Users\Vycros\source\MecanicaSires\prjSires\obj\Debug\prjSires.exe
+C:\Users\Vycros\source\MecanicaSires\prjSires\obj\Debug\prjSires.pdb
+C:\Users\Vycros\source\MecanicaSires\prjSires\obj\Debug\prjSires.Forms.frmPrincipal.resources
+C:\Users\Vycros\source\MecanicaSires\prjSires\obj\Debug\prjSires.csprojResolveAssemblyReference.cache
+C:\Users\Vycros\source\MecanicaSires\prjSires\obj\Debug\prjSires.Forms.frmCadCliente.resources
